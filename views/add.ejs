@@ -100,7 +100,7 @@
                   <div class="w-full md:w-1/3" style="background-image: url('/img/music1.jpg'); background-size: cover; background-position: 10%;">
                       
                   </div>
-                  <form method="post" action="/audio" class="w-full md:w-2/3 border border-gray-300 py-10 shadow-lg" enctype="multipart/form-data">
+                  <form method="post" action="/admin/audio" class="w-full md:w-2/3 border border-gray-300 py-10 shadow-lg" enctype="multipart/form-data">
                       <div class="mx-2 md:mx-5 lg:mx-10 relative mb-4">
                           <label for="songTitle" class="leading-7 text-sm text-gray-600">Song Title</label>
                           <input type="text" id="songTitle" required name="songTitle" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
@@ -124,52 +124,12 @@
                       <p class="text-xs text-gray-500 mt-3 mx-10">Clicking the sign up button you agree to all the cautions and are ready toride smoothly</p>
                   </form>
               </div>
-                
-              <!--Previous Form with no description-->
-
-              <!-- <div class="mx-2 sm:mx-7 md:mx-12 lg:mx-20 pt-32 flex flex-wrap" id="songs">
-                <div class="mx-2 md:mx-5 lg:mx-10" style="background-image: url('img/music4.jpg'); background-size: cover; background-position: 10%;">
-                </div>
-                <form method="post" action="/addpdf" id="book" class="mx-2 md:mx-5 lg:mx-10 border border-gray-300 py-10 shadow-lg" enctype="multipart/form-data">
-                    <div class="mx-2 md:mx-5 lg:mx-10 relative mb-4">
-                        <label for="songTitle" class="leading-7 text-sm text-gray-600">Book title</label>
-                        <input type="text" id="songTitle" required name="pdfTitle" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                    </div>
-                    <div class="mx-2 md:mx-5 lg:mx-10 relative mb-4">
-                      <label for="book_snippet" class="leading-7 text-sm text-gray-600">Book snippet</label>
-                      <textarea type="text" id="book_snippet" required name="book_snippet" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"></textarea>
-                    </div>
-                    <div class="mx-2 md:mx-5 lg:mx-10 relative mb-4">
-                      <label for="artiste" class="leading-7 text-sm text-gray-600">By who:</label>
-                      <input type="text" id="artiste" required name="author" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                    </div>  
-                    <div class="mx-2 md:mx-5 lg:mx-10 relative mb-4">
-                      <label for="year_released" class="leading-7 text-sm text-gray-600">Year Released</label>
-                      <input type="year" id="yearWritten" placeholder="2020.." required name="year_released" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                    </div>
-                    <div class="mx-2 md:mx-5 lg:mx-10 relative mb-4">
-                      <label for="number_of_pages" class="leading-7 text-sm text-gray-600">Number of Pages</label>
-                      <input type="number" id="number_of_pages" required name="pages" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                    </div>
-                    <div class="mx-2 md:mx-5 lg:mx-10 relative mb-4">
-                      <label for="item" class="leading-7 text-sm text-gray-600">Choose PDF<i class='bx bxs-file-pdf mx-2 text-xl'></i></label>
-                      <input type="file" accept="application/pdf" id="item" required name="pdf" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                    </div>
-                      
-                    <div class="mx-2 md:mx-5 lg:mx-10 relative" id="show-login">
-                      <button type="submit" class="w-full text-white bg-blue-800 border-0 py-2 px-6 focus:outline-none hover:bg-blue-900 rounded text-lg">Upload</button>
-                    </div>
-                    
-                    <p class="text-xs text-gray-500 mt-3 mx-10">Clicking the sign up button you agree to all the cautions and are ready toride smoothly</p>
-                </form>
-              </div>  -->
-
-              
+        
               <div class="mx-2 sm:mx-7 md:mx-12 lg:mx-20 pt-40 mt-40 flex flex-wrap" id="books">
-                <div class="w-full md:w-1/3" style="background-image: url('img/music4.jpg'); background-size: cover; background-position: 10%;">
+                <div class="w-full md:w-1/3" style="background-image: url('/img/music4.jpg'); background-size: cover; background-position: 10%;">
                     
                 </div>
-                <form method="post" action="/addpdf" id="book" class="w-full md:w-2/3 border border-gray-300 py-10 shadow-lg" enctype="multipart/form-data">
+                <form method="post" action="/admin/addpdf" id="book" class="w-full md:w-2/3 border border-gray-300 py-10 shadow-lg" enctype="multipart/form-data">
                     <div class="mx-2 md:mx-5 lg:mx-10 relative mb-4">
                         <label for="bookitle" class="leading-7 text-sm text-gray-600">Book Title</label>
                         <input type="text" id="songTitle" required name="pdfTitle" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
@@ -283,20 +243,19 @@
 
   closeBtn.addEventListener("click", ()=>{
     sidebar.classList.toggle("open");
-    menuBtnChange();//calling the function(optional)
+    menuBtnChange();
   });
 
-  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+  searchBtn.addEventListener("click", ()=>{
     sidebar.classList.toggle("open");
-    menuBtnChange(); //calling the function(optional)
+    menuBtnChange();
   });
 
-  // following are the code to change sidebar button(optional)
   function menuBtnChange() {
    if(sidebar.classList.contains("open")){
-     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
    }else {
-     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
    }
   }
   </script>

@@ -4,37 +4,14 @@ const PDF = require('../models/pdf');
 
 const router = express.Router();
 
-router.route('/').
+router.route('/:id').
 get(async (req,res)=>{
-    console.log(req.query['id']); 
-    const id = req.query['id'];
-    
-    Audio.find({},(err,foundAudio)=>{
-        console.log(id);
-        if(!err){
-            if(foundAudio){
-                PDF.find({},(error,foundPdf)=>{
-                   
-                    if(!error){
-                        if(foundPdf){
-                            PDF.findById(id,(err,SfoundPdf)=>{
-                                // console.log("=>",SfoundPdf);
-                                if(!err){
-                                    if(SfoundPdf){
-                                        console.log('====================================');
-                                        console.log("-------->",SfoundPdf);
-                                        console.log('====================================');
-                                        res.render("selected_book",{audioList:foundAudio.reverse(),pdfList:foundPdf.reverse(),singlePdf:SfoundPdf});
-                                    }
-                                }
-                            })
-                            
-                        }
-                    }
-                })
-            }
-        }
-    })
+    const id = req.params.id;
+
+    const audios =await Audio.find({});
+    const pdfs =await PDF.find({});
+    const selectedAudio =await Audio.findById(id);
+    res.render("selected",{audioList:audios.reverse(),pdfList:pdfs.reverse(),singleAudio:selectedAudio,singlePdf:[]});
 });
 
 module.exports = router;

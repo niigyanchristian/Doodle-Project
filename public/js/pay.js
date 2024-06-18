@@ -43,7 +43,6 @@ $(document).ready(function(){
             }
         }
         caretPosition += Math.floor(caretPosition / 2);
-        
         this.value = this.lastValue = parts.join('/');
         this.selectionStart = this.selectionEnd = caretPosition;
     }
@@ -53,5 +52,4 @@ $(document).ready(function(){
         $(this).parent().find('.radio').removeClass('selected');
         $(this).addClass('selected');
     });
-    
-    })
+});
